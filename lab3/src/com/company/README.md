@@ -1,5 +1,14 @@
 # Лабораторная работа №4
 
+### Enums:<br>
+Armor<br>
+Event<br>
+State<br>
+Status<br>
+### Interface:
+Armored<br>
+
+---
 Результаты работы:<br>
 >Полицейский Martin выстрелил и попал!<br>
 Пуля попала в объект Ракета<br>
