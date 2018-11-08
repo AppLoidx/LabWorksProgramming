@@ -27,6 +27,13 @@ public class Rocket extends PhysObject implements Armored {
         setArmorType(armorType);
     }
 
+    float calculateHeaviness(){
+        if (status == Status.AIR){
+            return (float) (heaviness / 1.4);
+        }else{
+            return heaviness;
+        }
+    }
 
     void addPassenger(Human ... humans){
         int index = 0;
@@ -54,11 +61,6 @@ public class Rocket extends PhysObject implements Armored {
 
     @Override
     Boolean update() {
-
-        // Инертность тела падает, когда она в воздухе
-        if (status == Status.AIR) {
-            heaviness /= 1.4;
-        }
 
         switch (event) {
             case COLLISION:

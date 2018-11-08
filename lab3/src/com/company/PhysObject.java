@@ -16,6 +16,10 @@ public abstract class PhysObject extends Thing{
         state = newState;
     }
 
+    float calculateHeaviness(){
+        return heaviness;
+    }
+
     @Override
     public boolean equals(Object obj){
         if (obj instanceof PhysObject){

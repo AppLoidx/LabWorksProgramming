@@ -23,7 +23,7 @@ public class Bullet extends PhysObject {
                 return;
             }
         }
-        if (target.heaviness < this.pushPow){
+        if (target.calculateHeaviness() < this.pushPow){
             target.event = Event.COLLISION;
             System.out.println("Урон был достаточно сильным чтобы иметь эффект!");
         }else{
