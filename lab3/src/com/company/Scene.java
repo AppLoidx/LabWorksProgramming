@@ -3,7 +3,10 @@ package com.company;
 import java.util.Arrays;
 
 public class Scene{
-
+    {
+        counter++;
+        pos = counter;
+    }
     Scene(Thing objects){
         addObject(objects);
     }
@@ -14,6 +17,9 @@ public class Scene{
 
     Thing[] objects = new Thing[1000];
     Thing[] objectsCopy = new Thing[1000];
+
+    static int counter = 0;
+    int pos;
 
     void addObject(Thing ... things){
         int index = 0;
@@ -64,5 +70,10 @@ public class Scene{
             return Arrays.equals(((Scene) obj).objects, this.objects);
         }
         return false;
+    }
+
+    @Override
+    public int hashCode(){
+        return pos;
     }
 }
