@@ -7,6 +7,7 @@ State<br>
 Status<br>
 ### Interface:
 Armored<br>
+Armed<br>
 
 Условие задачи
 ---
